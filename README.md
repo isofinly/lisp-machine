@@ -137,24 +137,24 @@ JMP, которая переходит на начало секции `CODE`.
 
 | Инструкция | addr/direct | Количество тактов в цикле исполнения | Описание                                                             |
 |------------|------------|--------------------------------------|----------------------------------------------------------------------|
-| `LD`       | addr        | 1                                    | AC <- MEM(ARD)                                                       |
-| `ST`       | addr        | 1                                    | MEM(ARD) <- AC                                                       |
-| `ADD`      | addr        | 1                                    | AC <- AC + MEM(ARD)                                                  |
-| `SUB`      | addr        | 1                                    | AC <- AC - MEM(ARD)                                                  |
-| `MUL`      | addr        | 1                                    | AC <- AC * MEM(ARD)                                                  |
-| `DIV`      | addr        | 1                                    | AC <- AC / MEM(ARD)                                                  |
-| `MOD`      | addr        | 1                                    | AC <- AC % MEM(ARD)                                                  |
-| `EQ`       | addr        | 1                                    | if AC == MEM(ARD) then AC <- 1 else AC <- 0                          |
-| `GT`       | addr        | 1                                    | if AC > MEM(ARD) then AC <- 1 else AC <- 0                           |
-| `LT`       | addr        | 1                                    | if AC < MEM(ARD) then AC <- 1 else AC <- 0                           |
-| `JZ`       | addr        | 1                                    | if AC == 0 then IP <- ARD                                            |
-| `JNZ`      | addr        | 1                                    | if AC != 0 then IP <- ARD                                            |
-| `JMP`      | addr        | 1                                    | IP <- ARD                                                            |
+| `LD`       | addr        | 1                                    | AC <- MEM(ADDR)                                                       |
+| `ST`       | addr        | 1                                    | MEM(ADDR) <- AC                                                       |
+| `ADD`      | addr        | 1                                    | AC <- AC + MEM(ADDR)                                                  |
+| `SUB`      | addr        | 1                                    | AC <- AC - MEM(ADDR)                                                  |
+| `MUL`      | addr        | 1                                    | AC <- AC * MEM(ADDR)                                                  |
+| `DIV`      | addr        | 1                                    | AC <- AC / MEM(ADDR)                                                  |
+| `MOD`      | addr        | 1                                    | AC <- AC % MEM(ADDR)                                                  |
+| `EQ`       | addr        | 1                                    | if AC == MEM(ADDR) then AC <- 1 else AC <- 0                          |
+| `GT`       | addr        | 1                                    | if AC > MEM(ADDR) then AC <- 1 else AC <- 0                           |
+| `LT`       | addr        | 1                                    | if AC < MEM(ADDR) then AC <- 1 else AC <- 0                           |
+| `JZ`       | addr        | 1                                    | if AC == 0 then IP <- ADDR                                            |
+| `JNZ`      | addr        | 1                                    | if AC != 0 then IP <- ADDR                                            |
+| `JMP`      | addr        | 1                                    | IP <- ADDR                                                            |
 | `PUSH`     | direct     | 2                                    | SP <- SP - 1; MEM(SP) <- AC                                          |
 | `POP`      | direct     | 1                                    | SP <- SP + 1                                                         |
 | `IN`       | direct     | 1                                    | AC <- next_token                                                     |
 | `OUT`      | direct     | 1                                    | print AC                                                             |
-| `CALL`     | addr        | 3                                    | SP <- SP - 1; MEM(SP) <- IP; IP <- ARD                               |
+| `CALL`     | addr        | 3                                    | SP <- SP - 1; MEM(SP) <- IP; IP <- ADDR                               |
 | `RET`      | direct     | 2                                    | IP <- MEM(SP); SP <- SP + 1                                          |
 | `HLT`      | direct     | 1                                    | завершение работы программы                                          |
 

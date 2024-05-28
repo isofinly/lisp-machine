@@ -353,18 +353,7 @@ DEBUG:root:INSTR_N: 32, TICK: 119, IP: 521, DR: 526, AR: 0, AC: 1, Z: False, INS
 DEBUG:root:INSTR_N: 33, TICK: 124, IP: 522, DR: 111, AR: 0, AC: 111, Z: False, INSTR: Instr(LD arg[0 (STACK_OFFSET)] ), SP: 2047, Stack: 111 
 DEBUG:root:OUT: 111 - "o"
 DEBUG:root:INSTR_N: 34, TICK: 127, IP: 523, DR: 111, AR: 0, AC: 111, Z: False, INSTR: Instr(OUT), SP: 2047, Stack: 111 
-DEBUG:root:IN: 0
-DEBUG:root:INSTR_N: 35, TICK: 130, IP: 524, DR: 111, AR: 0, AC: 0, Z: False, INSTR: Instr(IN), SP: 2047, Stack: 111 
-DEBUG:root:INSTR_N: 36, TICK: 134, IP: 525, DR: 2047, AR: 0, AC: 0, Z: False, INSTR: Instr(ST arg[0 (STACK_OFFSET)] ), SP: 2047, Stack: 0 
-DEBUG:root:INSTR_N: 37, TICK: 137, IP: 515, DR: 515, AR: 0, AC: 0, Z: False, INSTR: Instr(JMP arg[515 (ADDRESS)] ), SP: 2047, Stack: 0 
-DEBUG:root:INSTR_N: 38, TICK: 140, IP: 516, DR: 0, AR: 0, AC: 0, Z: False, INSTR: Instr(LD arg[0 (DIRECT)] ), SP: 2047, Stack: 0 
-DEBUG:root:INSTR_N: 39, TICK: 143, IP: 517, DR: 0, AR: 0, AC: 0, Z: False, INSTR: Instr(PUSH), SP: 2046, Stack: 0 0 
-DEBUG:root:INSTR_N: 39, TICK: 144, IP: 517, DR: 0, AR: 0, AC: 0, Z: False, INSTR: Instr(PUSH), SP: 2046, Stack: 0 0 
-DEBUG:root:INSTR_N: 40, TICK: 149, IP: 518, DR: 0, AR: 0, AC: 0, Z: False, INSTR: Instr(LD arg[1 (STACK_OFFSET)] ), SP: 2046, Stack: 0 0 
-DEBUG:root:INSTR_N: 41, TICK: 154, IP: 519, DR: 0, AR: 0, AC: 0, Z: True, INSTR: Instr(GT arg[0 (STACK_OFFSET)] ), SP: 2046, Stack: 0 0 
-DEBUG:root:INSTR_N: 42, TICK: 157, IP: 520, DR: 0, AR: 0, AC: 0, Z: True, INSTR: Instr(POP), SP: 2047, Stack: 0 
-DEBUG:root:INSTR_N: 43, TICK: 160, IP: 526, DR: 526, AR: 0, AC: 0, Z: True, INSTR: Instr(JZ arg[526 (ADDRESS)] ), SP: 2047, Stack: 0 
-DEBUG:root:INSTR_N: 44, TICK: 163, IP: 527, DR: 526, AR: 0, AC: 0, Z: True, INSTR: Instr(HLT), SP: 2047, Stack: 0 
+...
 ```
 
 Здесь показаны значения регистров, флага zero, раскодированной инструкции и стека (сверху вниз) в конце каждого из тактов.

@@ -285,7 +285,6 @@ class ControlUnit:
     def tick(self) -> None:
         self.tick_n += 1
         handle_tick(self)
-        # logging.debug("INSTR_N: %s, TC: %s", self.executed_instruction_n, self.tc)
 
     def __repr__(self) -> str:
         stack_str = ""

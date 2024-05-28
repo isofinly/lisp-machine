@@ -33,7 +33,6 @@ def read_program(file_path: str) -> BinaryProgram:
     address = 0
 
     for i in range(0, len(binary_data), 8):
-        # logging.debug(f"bin: {(binary_data[i:i + 4]).hex()} {(binary_data[i + 4:i + 8]).hex()}")
         instruction_word = int.from_bytes(binary_data[i : i + 4], "big")
         arg_value = int.from_bytes(binary_data[i + 4 : i + 8], "big")
 
@@ -59,7 +58,6 @@ def read_program(file_path: str) -> BinaryProgram:
             arg = Arg(arg_value, addressing_type)
 
         memory[address] = Instruction(opcode, arg)
-        # logging.debug(f"Loaded instruction at address {address}: {memory[address]}")
 
         if address == 0:
             address = 512

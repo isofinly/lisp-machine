@@ -1,5 +1,5 @@
 (progn
-  (include "useful_functions/io.lisp")
+  (include "functions/io.lisp")
 
   (setq a 0)
   (setq b 1)

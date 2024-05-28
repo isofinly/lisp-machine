@@ -1,6 +1,6 @@
 source: |-
   (progn 
-    (include "useful_functions/io.lisp")
+    (include "functions/io.lisp")
 
     (setq a (setq b "hello"))
     (print_string a)

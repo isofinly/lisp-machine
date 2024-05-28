@@ -366,6 +366,7 @@ DEBUG:root:INSTR_N: 42, TICK: 157, IP: 520, DR: 0, AR: 0, AC: 0, Z: True, INSTR:
 DEBUG:root:INSTR_N: 43, TICK: 160, IP: 526, DR: 526, AR: 0, AC: 0, Z: True, INSTR: Instr(JZ arg[526 (ADDRESS)] ), SP: 2047, Stack: 0 
 DEBUG:root:INSTR_N: 44, TICK: 163, IP: 527, DR: 526, AR: 0, AC: 0, Z: True, INSTR: Instr(HLT), SP: 2047, Stack: 0 
 ```
+
 Здесь показаны значения регистров, флага zero, раскодированной инструкции и стека (сверху вниз) в конце каждого из тактов.
 
 ## Аналитика

@@ -545,9 +545,7 @@ def handle_execute_tick(control_unit: ControlUnit) -> None:
     if control_unit.decoded_instruction is None:
         raise UncodedInstructionError(control_unit)
 
-    handler: Callable[[ControlUnit], None] = EXECUTE_HANDLERS[
-        control_unit.decoded_instruction.opcode
-    ]
+    handler: Callable[[ControlUnit], None] = EXECUTE_HANDLERS[control_unit.decoded_instruction.opcode]
     handler(control_unit)
     logging.debug("%s", control_unit)
 

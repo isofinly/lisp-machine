@@ -41,9 +41,10 @@ def main(source: str, target: str) -> None:
         )
         f.write(program.to_machine_code())
         if len(sys.argv) > 2:
-            write_debug_output(program, sys.argv[2]+".debug.txt")
+            write_debug_output(program, sys.argv[2] + ".debug.txt")
         else:
             write_debug_output(program, "debug.txt")
+
 
 def write_debug_output(program: Program, debug_file_path: str) -> None:
     with open(debug_file_path, "w") as debug_file:

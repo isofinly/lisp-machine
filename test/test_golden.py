@@ -19,6 +19,7 @@ def test_whole_by_golden(golden: typing.Any, caplog: typing.Any) -> None:
         source = os.path.join(tmpdirname, "source")
         input_stream = os.path.join(tmpdirname, "input")
         target = os.path.join(tmpdirname, "target")
+        debug_output = os.path.join("debug.txt")
 
         with open(source, "w", encoding="utf-8") as file:
             file.write(golden["source"])
@@ -33,8 +34,13 @@ def test_whole_by_golden(golden: typing.Any, caplog: typing.Any) -> None:
         with open(target, "rb") as file:
             code = file.read()
 
+        with open(debug_output, encoding="utf-8") as file:
+            debug_content = file.read()
+
         expected_code = binascii.unhexlify(golden["code"].strip())
+        expected_debug = golden["debug"]
 
         assert code == expected_code, f"{code.hex()} != {expected_code.hex()}"
         assert stdout.getvalue() == golden["output"]
         assert caplog.text.strip() == golden["log"].strip()
+        assert debug_content.strip() == expected_debug.strip()

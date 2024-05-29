@@ -10,131 +10,226 @@ input: |-
   foo
 code: |-
   0c00000000000200000000000000000101400000000000020000000000000061014000000000000300000000000000020e0000000000000001c0000000000000000000000000000101400000000000040000000000000062014000000000000500000000000000040e0000000000000001c0000000000000000000000000000101400000000000060000000000000063014000000000000700000000000000060e0000000000000001c000000000000000c00000000000020e00000000000000014000000000000100800000000000010e0000000000000000000000000000000e0000000000000000c000000000000006c00000000000010b4000000000022900c000000000000202c0000000000000020000000000000101400000000000010080000000000001120000000000000000c0000000000000020000000000000101c00000000000000c4000000000021c00c00000000000020d000000000000000d000000000000000d0000000000000000c00000000000010e00000000000000014000000000000100800000000000010e0000000000000000000000000000000e0000000000000000c000000000000006c00000000000010b4000000000024100c000000000000202c0000000000000020000000000000101400000000000010080000000000001120000000000000000c0000000000000020000000000000101c00000000000000c4000000000023400c00000000000020d000000000000000d000000000000000d0000000000000000c00000000000000e00000000000000014000000000000100800000000000010e0000000000000000000000000000000e0000000000000000c000000000000006c00000000000010b4000000000025900c000000000000202c0000000000000020000000000000101400000000000010080000000000001120000000000000000c0000000000000020000000000000101c00000000000000c4000000000024c00c00000000000020d000000000000000d000000000000000d000000000000001300000000000000
-
 output: |
   source LoC: 7 code instr: 95
   ============================================================
   abc
   instructions_n: 104 ticks: 396
+debug: |-
+  0000 - 0C0000000000000200 - JMP 512 (ADDRESS)
+  0200 - 000000000000000001 - LD 1 (DIRECT)
+  0201 - 010000000000000002 - ST 2 (ADDRESS)
+  0202 - 000000000000000061 - LD 97 (DIRECT)
+  0203 - 010000000000000003 - ST 3 (ADDRESS)
+  0204 - 000000000000000002 - LD 2 (DIRECT)
+  0205 - 0E0000000000000000 - PUSH 
+  0206 - 010000000000000000 - ST 0 (STACK_OFFSET)
+  0207 - 000000000000000001 - LD 1 (DIRECT)
+  0208 - 010000000000000004 - ST 4 (ADDRESS)
+  0209 - 000000000000000062 - LD 98 (DIRECT)
+  020A - 010000000000000005 - ST 5 (ADDRESS)
+  020B - 000000000000000004 - LD 4 (DIRECT)
+  020C - 0E0000000000000000 - PUSH 
+  020D - 010000000000000000 - ST 0 (STACK_OFFSET)
+  020E - 000000000000000001 - LD 1 (DIRECT)
+  020F - 010000000000000006 - ST 6 (ADDRESS)
+  0210 - 000000000000000063 - LD 99 (DIRECT)
+  0211 - 010000000000000007 - ST 7 (ADDRESS)
+  0212 - 000000000000000006 - LD 6 (DIRECT)
+  0213 - 0E0000000000000000 - PUSH 
+  0214 - 010000000000000000 - ST 0 (STACK_OFFSET)
+  0215 - 000000000000000002 - LD 2 (STACK_OFFSET)
+  0216 - 0E0000000000000000 - PUSH 
+  0217 - 010000000000000001 - ST 1 (ADDRESS)
+  0218 - 000000000000000001 - LD 1 (INDIRECT)
+  0219 - 0E0000000000000000 - PUSH 
+  021A - 000000000000000000 - LD 0 (DIRECT)
+  021B - 0E0000000000000000 - PUSH 
+  021C - 000000000000000000 - LD 0 (STACK_OFFSET)
+  021D - 060000000000000001 - EQ 1 (STACK_OFFSET)
+  021E - 0B0000000000000229 - JNZ 553 (ADDRESS)
+  021F - 000000000000000002 - LD 2 (STACK_OFFSET)
+  0220 - 020000000000000000 - ADD 0 (STACK_OFFSET)
+  0221 - 020000000000000001 - ADD 1 (DIRECT)
+  0222 - 010000000000000001 - ST 1 (ADDRESS)
+  0223 - 000000000000000001 - LD 1 (INDIRECT)
+  0224 - 120000000000000000 - OUT 
+  0225 - 000000000000000000 - LD 0 (STACK_OFFSET)
+  0226 - 020000000000000001 - ADD 1 (DIRECT)
+  0227 - 010000000000000000 - ST 0 (STACK_OFFSET)
+  0228 - 0C000000000000021C - JMP 540 (ADDRESS)
+  0229 - 000000000000000002 - LD 2 (STACK_OFFSET)
+  022A - 0D0000000000000000 - POP 
+  022B - 0D0000000000000000 - POP 
+  022C - 0D0000000000000000 - POP 
+  022D - 000000000000000001 - LD 1 (STACK_OFFSET)
+  022E - 0E0000000000000000 - PUSH 
+  022F - 010000000000000001 - ST 1 (ADDRESS)
+  0230 - 000000000000000001 - LD 1 (INDIRECT)
+  0231 - 0E0000000000000000 - PUSH 
+  0232 - 000000000000000000 - LD 0 (DIRECT)
+  0233 - 0E0000000000000000 - PUSH 
+  0234 - 000000000000000000 - LD 0 (STACK_OFFSET)
+  0235 - 060000000000000001 - EQ 1 (STACK_OFFSET)
+  0236 - 0B0000000000000241 - JNZ 577 (ADDRESS)
+  0237 - 000000000000000002 - LD 2 (STACK_OFFSET)
+  0238 - 020000000000000000 - ADD 0 (STACK_OFFSET)
+  0239 - 020000000000000001 - ADD 1 (DIRECT)
+  023A - 010000000000000001 - ST 1 (ADDRESS)
+  023B - 000000000000000001 - LD 1 (INDIRECT)
+  023C - 120000000000000000 - OUT 
+  023D - 000000000000000000 - LD 0 (STACK_OFFSET)
+  023E - 020000000000000001 - ADD 1 (DIRECT)
+  023F - 010000000000000000 - ST 0 (STACK_OFFSET)
+  0240 - 0C0000000000000234 - JMP 564 (ADDRESS)
+  0241 - 000000000000000002 - LD 2 (STACK_OFFSET)
+  0242 - 0D0000000000000000 - POP 
+  0243 - 0D0000000000000000 - POP 
+  0244 - 0D0000000000000000 - POP 
+  0245 - 000000000000000000 - LD 0 (STACK_OFFSET)
+  0246 - 0E0000000000000000 - PUSH 
+  0247 - 010000000000000001 - ST 1 (ADDRESS)
+  0248 - 000000000000000001 - LD 1 (INDIRECT)
+  0249 - 0E0000000000000000 - PUSH 
+  024A - 000000000000000000 - LD 0 (DIRECT)
+  024B - 0E0000000000000000 - PUSH 
+  024C - 000000000000000000 - LD 0 (STACK_OFFSET)
+  024D - 060000000000000001 - EQ 1 (STACK_OFFSET)
+  024E - 0B0000000000000259 - JNZ 601 (ADDRESS)
+  024F - 000000000000000002 - LD 2 (STACK_OFFSET)
+  0250 - 020000000000000000 - ADD 0 (STACK_OFFSET)
+  0251 - 020000000000000001 - ADD 1 (DIRECT)
+  0252 - 010000000000000001 - ST 1 (ADDRESS)
+  0253 - 000000000000000001 - LD 1 (INDIRECT)
+  0254 - 120000000000000000 - OUT 
+  0255 - 000000000000000000 - LD 0 (STACK_OFFSET)
+  0256 - 020000000000000001 - ADD 1 (DIRECT)
+  0257 - 010000000000000000 - ST 0 (STACK_OFFSET)
+  0258 - 0C000000000000024C - JMP 588 (ADDRESS)
+  0259 - 000000000000000002 - LD 2 (STACK_OFFSET)
+  025A - 0D0000000000000000 - POP 
+  025B - 0D0000000000000000 - POP 
+  025C - 0D0000000000000000 - POP 
+  025D - 130000000000000000 - HLT
 
 log: |
-    DEBUG   machine:simulation    INSTR_N: 0, TICK: 0, IP: 0, DR: 0, AR: 0, AC: 0, Z: True, INSTR: None, SP: 2048, Stack: 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 1, TICK: 3, IP: 512, DR: 512, AR: 0, AC: 0, Z: True, INSTR: Instr(JMP arg[512 (ADDRESS)] ), SP: 2048, Stack: 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 2, TICK: 6, IP: 513, DR: 1, AR: 0, AC: 1, Z: True, INSTR: Instr(LD arg[1 (DIRECT)] ), SP: 2048, Stack: 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 3, TICK: 9, IP: 514, DR: 2, AR: 0, AC: 1, Z: True, INSTR: Instr(ST arg[2 (ADDRESS)] ), SP: 2048, Stack: 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 4, TICK: 12, IP: 515, DR: 97, AR: 0, AC: 97, Z: True, INSTR: Instr(LD arg[97 (DIRECT)] ), SP: 2048, Stack: 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 5, TICK: 15, IP: 516, DR: 3, AR: 0, AC: 97, Z: True, INSTR: Instr(ST arg[3 (ADDRESS)] ), SP: 2048, Stack: 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 6, TICK: 18, IP: 517, DR: 2, AR: 0, AC: 2, Z: True, INSTR: Instr(LD arg[2 (DIRECT)] ), SP: 2048, Stack: 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 7, TICK: 21, IP: 518, DR: 2, AR: 0, AC: 2, Z: True, INSTR: Instr(PUSH), SP: 2047, Stack: 0 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 7, TICK: 22, IP: 518, DR: 2, AR: 0, AC: 2, Z: True, INSTR: Instr(PUSH), SP: 2047, Stack: 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 8, TICK: 26, IP: 519, DR: 2047, AR: 0, AC: 2, Z: False, INSTR: Instr(ST arg[0 (STACK_OFFSET)] ), SP: 2047, Stack: 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 9, TICK: 29, IP: 520, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(LD arg[1 (DIRECT)] ), SP: 2047, Stack: 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 10, TICK: 32, IP: 521, DR: 4, AR: 0, AC: 1, Z: False, INSTR: Instr(ST arg[4 (ADDRESS)] ), SP: 2047, Stack: 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 11, TICK: 35, IP: 522, DR: 98, AR: 0, AC: 98, Z: False, INSTR: Instr(LD arg[98 (DIRECT)] ), SP: 2047, Stack: 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 12, TICK: 38, IP: 523, DR: 5, AR: 0, AC: 98, Z: False, INSTR: Instr(ST arg[5 (ADDRESS)] ), SP: 2047, Stack: 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 13, TICK: 41, IP: 524, DR: 4, AR: 0, AC: 4, Z: False, INSTR: Instr(LD arg[4 (DIRECT)] ), SP: 2047, Stack: 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 14, TICK: 44, IP: 525, DR: 4, AR: 0, AC: 4, Z: False, INSTR: Instr(PUSH), SP: 2046, Stack: 0 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 14, TICK: 45, IP: 525, DR: 4, AR: 0, AC: 4, Z: False, INSTR: Instr(PUSH), SP: 2046, Stack: 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 15, TICK: 49, IP: 526, DR: 2046, AR: 0, AC: 4, Z: False, INSTR: Instr(ST arg[0 (STACK_OFFSET)] ), SP: 2046, Stack: 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 16, TICK: 52, IP: 527, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(LD arg[1 (DIRECT)] ), SP: 2046, Stack: 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 17, TICK: 55, IP: 528, DR: 6, AR: 0, AC: 1, Z: False, INSTR: Instr(ST arg[6 (ADDRESS)] ), SP: 2046, Stack: 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 18, TICK: 58, IP: 529, DR: 99, AR: 0, AC: 99, Z: False, INSTR: Instr(LD arg[99 (DIRECT)] ), SP: 2046, Stack: 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 19, TICK: 61, IP: 530, DR: 7, AR: 0, AC: 99, Z: False, INSTR: Instr(ST arg[7 (ADDRESS)] ), SP: 2046, Stack: 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 20, TICK: 64, IP: 531, DR: 6, AR: 0, AC: 6, Z: False, INSTR: Instr(LD arg[6 (DIRECT)] ), SP: 2046, Stack: 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 21, TICK: 67, IP: 532, DR: 6, AR: 0, AC: 6, Z: False, INSTR: Instr(PUSH), SP: 2045, Stack: 0 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 21, TICK: 68, IP: 532, DR: 6, AR: 0, AC: 6, Z: False, INSTR: Instr(PUSH), SP: 2045, Stack: 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 22, TICK: 72, IP: 533, DR: 2045, AR: 0, AC: 6, Z: False, INSTR: Instr(ST arg[0 (STACK_OFFSET)] ), SP: 2045, Stack: 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 23, TICK: 77, IP: 534, DR: 2, AR: 0, AC: 2, Z: False, INSTR: Instr(LD arg[2 (STACK_OFFSET)] ), SP: 2045, Stack: 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 24, TICK: 80, IP: 535, DR: 2, AR: 0, AC: 2, Z: False, INSTR: Instr(PUSH), SP: 2044, Stack: 0 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 24, TICK: 81, IP: 535, DR: 2, AR: 0, AC: 2, Z: False, INSTR: Instr(PUSH), SP: 2044, Stack: 2 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 25, TICK: 84, IP: 536, DR: 1, AR: 0, AC: 2, Z: False, INSTR: Instr(ST arg[1 (ADDRESS)] ), SP: 2044, Stack: 2 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 26, TICK: 89, IP: 537, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(LD arg[1 (INDIRECT)] ), SP: 2044, Stack: 2 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 27, TICK: 92, IP: 538, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(PUSH), SP: 2043, Stack: 0 2 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 27, TICK: 93, IP: 538, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(PUSH), SP: 2043, Stack: 1 2 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 28, TICK: 96, IP: 539, DR: 0, AR: 0, AC: 0, Z: False, INSTR: Instr(LD arg[0 (DIRECT)] ), SP: 2043, Stack: 1 2 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 29, TICK: 99, IP: 540, DR: 0, AR: 0, AC: 0, Z: False, INSTR: Instr(PUSH), SP: 2042, Stack: 0 1 2 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 29, TICK: 100, IP: 540, DR: 0, AR: 0, AC: 0, Z: False, INSTR: Instr(PUSH), SP: 2042, Stack: 0 1 2 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 30, TICK: 105, IP: 541, DR: 0, AR: 0, AC: 0, Z: False, INSTR: Instr(LD arg[0 (STACK_OFFSET)] ), SP: 2042, Stack: 0 1 2 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 31, TICK: 110, IP: 542, DR: 1, AR: 0, AC: 0, Z: True, INSTR: Instr(EQ arg[1 (STACK_OFFSET)] ), SP: 2042, Stack: 0 1 2 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 32, TICK: 113, IP: 543, DR: 553, AR: 0, AC: 0, Z: True, INSTR: Instr(JNZ arg[553 (ADDRESS)] ), SP: 2042, Stack: 0 1 2 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 33, TICK: 118, IP: 544, DR: 2, AR: 0, AC: 2, Z: False, INSTR: Instr(LD arg[2 (STACK_OFFSET)] ), SP: 2042, Stack: 0 1 2 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 34, TICK: 123, IP: 545, DR: 0, AR: 0, AC: 2, Z: False, INSTR: Instr(ADD arg[0 (STACK_OFFSET)] ), SP: 2042, Stack: 0 1 2 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 35, TICK: 126, IP: 546, DR: 1, AR: 0, AC: 3, Z: False, INSTR: Instr(ADD arg[1 (DIRECT)] ), SP: 2042, Stack: 0 1 2 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 36, TICK: 129, IP: 547, DR: 1, AR: 0, AC: 3, Z: False, INSTR: Instr(ST arg[1 (ADDRESS)] ), SP: 2042, Stack: 0 1 2 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 37, TICK: 134, IP: 548, DR: 97, AR: 0, AC: 97, Z: False, INSTR: Instr(LD arg[1 (INDIRECT)] ), SP: 2042, Stack: 0 1 2 6 4 2 
-    DEBUG   hardwire:latch_out     OUT: 97 - "a"
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 38, TICK: 137, IP: 549, DR: 97, AR: 0, AC: 97, Z: False, INSTR: Instr(OUT), SP: 2042, Stack: 0 1 2 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 39, TICK: 142, IP: 550, DR: 0, AR: 0, AC: 0, Z: False, INSTR: Instr(LD arg[0 (STACK_OFFSET)] ), SP: 2042, Stack: 0 1 2 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 40, TICK: 145, IP: 551, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(ADD arg[1 (DIRECT)] ), SP: 2042, Stack: 0 1 2 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 41, TICK: 149, IP: 552, DR: 2042, AR: 0, AC: 1, Z: False, INSTR: Instr(ST arg[0 (STACK_OFFSET)] ), SP: 2042, Stack: 1 1 2 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 42, TICK: 152, IP: 540, DR: 540, AR: 0, AC: 1, Z: False, INSTR: Instr(JMP arg[540 (ADDRESS)] ), SP: 2042, Stack: 1 1 2 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 43, TICK: 157, IP: 541, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(LD arg[0 (STACK_OFFSET)] ), SP: 2042, Stack: 1 1 2 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 44, TICK: 162, IP: 542, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(EQ arg[1 (STACK_OFFSET)] ), SP: 2042, Stack: 1 1 2 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 45, TICK: 165, IP: 553, DR: 553, AR: 0, AC: 1, Z: False, INSTR: Instr(JNZ arg[553 (ADDRESS)] ), SP: 2042, Stack: 1 1 2 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 46, TICK: 170, IP: 554, DR: 2, AR: 0, AC: 2, Z: False, INSTR: Instr(LD arg[2 (STACK_OFFSET)] ), SP: 2042, Stack: 1 1 2 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 47, TICK: 173, IP: 555, DR: 2, AR: 0, AC: 2, Z: False, INSTR: Instr(POP), SP: 2043, Stack: 1 2 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 48, TICK: 176, IP: 556, DR: 2, AR: 0, AC: 2, Z: False, INSTR: Instr(POP), SP: 2044, Stack: 2 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 49, TICK: 179, IP: 557, DR: 2, AR: 0, AC: 2, Z: False, INSTR: Instr(POP), SP: 2045, Stack: 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 50, TICK: 184, IP: 558, DR: 4, AR: 0, AC: 4, Z: False, INSTR: Instr(LD arg[1 (STACK_OFFSET)] ), SP: 2045, Stack: 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 51, TICK: 187, IP: 559, DR: 4, AR: 0, AC: 4, Z: False, INSTR: Instr(PUSH), SP: 2044, Stack: 2 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 51, TICK: 188, IP: 559, DR: 4, AR: 0, AC: 4, Z: False, INSTR: Instr(PUSH), SP: 2044, Stack: 4 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 52, TICK: 191, IP: 560, DR: 1, AR: 0, AC: 4, Z: False, INSTR: Instr(ST arg[1 (ADDRESS)] ), SP: 2044, Stack: 4 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 53, TICK: 196, IP: 561, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(LD arg[1 (INDIRECT)] ), SP: 2044, Stack: 4 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 54, TICK: 199, IP: 562, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(PUSH), SP: 2043, Stack: 1 4 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 54, TICK: 200, IP: 562, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(PUSH), SP: 2043, Stack: 1 4 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 55, TICK: 203, IP: 563, DR: 0, AR: 0, AC: 0, Z: False, INSTR: Instr(LD arg[0 (DIRECT)] ), SP: 2043, Stack: 1 4 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 56, TICK: 206, IP: 564, DR: 0, AR: 0, AC: 0, Z: False, INSTR: Instr(PUSH), SP: 2042, Stack: 1 1 4 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 56, TICK: 207, IP: 564, DR: 0, AR: 0, AC: 0, Z: False, INSTR: Instr(PUSH), SP: 2042, Stack: 0 1 4 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 57, TICK: 212, IP: 565, DR: 0, AR: 0, AC: 0, Z: False, INSTR: Instr(LD arg[0 (STACK_OFFSET)] ), SP: 2042, Stack: 0 1 4 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 58, TICK: 217, IP: 566, DR: 1, AR: 0, AC: 0, Z: True, INSTR: Instr(EQ arg[1 (STACK_OFFSET)] ), SP: 2042, Stack: 0 1 4 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 59, TICK: 220, IP: 567, DR: 577, AR: 0, AC: 0, Z: True, INSTR: Instr(JNZ arg[577 (ADDRESS)] ), SP: 2042, Stack: 0 1 4 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 60, TICK: 225, IP: 568, DR: 4, AR: 0, AC: 4, Z: False, INSTR: Instr(LD arg[2 (STACK_OFFSET)] ), SP: 2042, Stack: 0 1 4 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 61, TICK: 230, IP: 569, DR: 0, AR: 0, AC: 4, Z: False, INSTR: Instr(ADD arg[0 (STACK_OFFSET)] ), SP: 2042, Stack: 0 1 4 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 62, TICK: 233, IP: 570, DR: 1, AR: 0, AC: 5, Z: False, INSTR: Instr(ADD arg[1 (DIRECT)] ), SP: 2042, Stack: 0 1 4 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 63, TICK: 236, IP: 571, DR: 1, AR: 0, AC: 5, Z: False, INSTR: Instr(ST arg[1 (ADDRESS)] ), SP: 2042, Stack: 0 1 4 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 64, TICK: 241, IP: 572, DR: 98, AR: 0, AC: 98, Z: False, INSTR: Instr(LD arg[1 (INDIRECT)] ), SP: 2042, Stack: 0 1 4 6 4 2 
-    DEBUG   hardwire:latch_out     OUT: 98 - "b"
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 65, TICK: 244, IP: 573, DR: 98, AR: 0, AC: 98, Z: False, INSTR: Instr(OUT), SP: 2042, Stack: 0 1 4 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 66, TICK: 249, IP: 574, DR: 0, AR: 0, AC: 0, Z: False, INSTR: Instr(LD arg[0 (STACK_OFFSET)] ), SP: 2042, Stack: 0 1 4 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 67, TICK: 252, IP: 575, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(ADD arg[1 (DIRECT)] ), SP: 2042, Stack: 0 1 4 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 68, TICK: 256, IP: 576, DR: 2042, AR: 0, AC: 1, Z: False, INSTR: Instr(ST arg[0 (STACK_OFFSET)] ), SP: 2042, Stack: 1 1 4 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 69, TICK: 259, IP: 564, DR: 564, AR: 0, AC: 1, Z: False, INSTR: Instr(JMP arg[564 (ADDRESS)] ), SP: 2042, Stack: 1 1 4 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 70, TICK: 264, IP: 565, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(LD arg[0 (STACK_OFFSET)] ), SP: 2042, Stack: 1 1 4 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 71, TICK: 269, IP: 566, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(EQ arg[1 (STACK_OFFSET)] ), SP: 2042, Stack: 1 1 4 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 72, TICK: 272, IP: 577, DR: 577, AR: 0, AC: 1, Z: False, INSTR: Instr(JNZ arg[577 (ADDRESS)] ), SP: 2042, Stack: 1 1 4 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 73, TICK: 277, IP: 578, DR: 4, AR: 0, AC: 4, Z: False, INSTR: Instr(LD arg[2 (STACK_OFFSET)] ), SP: 2042, Stack: 1 1 4 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 74, TICK: 280, IP: 579, DR: 4, AR: 0, AC: 4, Z: False, INSTR: Instr(POP), SP: 2043, Stack: 1 4 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 75, TICK: 283, IP: 580, DR: 4, AR: 0, AC: 4, Z: False, INSTR: Instr(POP), SP: 2044, Stack: 4 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 76, TICK: 286, IP: 581, DR: 4, AR: 0, AC: 4, Z: False, INSTR: Instr(POP), SP: 2045, Stack: 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 77, TICK: 291, IP: 582, DR: 6, AR: 0, AC: 6, Z: False, INSTR: Instr(LD arg[0 (STACK_OFFSET)] ), SP: 2045, Stack: 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 78, TICK: 294, IP: 583, DR: 6, AR: 0, AC: 6, Z: False, INSTR: Instr(PUSH), SP: 2044, Stack: 4 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 78, TICK: 295, IP: 583, DR: 6, AR: 0, AC: 6, Z: False, INSTR: Instr(PUSH), SP: 2044, Stack: 6 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 79, TICK: 298, IP: 584, DR: 1, AR: 0, AC: 6, Z: False, INSTR: Instr(ST arg[1 (ADDRESS)] ), SP: 2044, Stack: 6 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 80, TICK: 303, IP: 585, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(LD arg[1 (INDIRECT)] ), SP: 2044, Stack: 6 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 81, TICK: 306, IP: 586, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(PUSH), SP: 2043, Stack: 1 6 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 81, TICK: 307, IP: 586, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(PUSH), SP: 2043, Stack: 1 6 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 82, TICK: 310, IP: 587, DR: 0, AR: 0, AC: 0, Z: False, INSTR: Instr(LD arg[0 (DIRECT)] ), SP: 2043, Stack: 1 6 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 83, TICK: 313, IP: 588, DR: 0, AR: 0, AC: 0, Z: False, INSTR: Instr(PUSH), SP: 2042, Stack: 1 1 6 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 83, TICK: 314, IP: 588, DR: 0, AR: 0, AC: 0, Z: False, INSTR: Instr(PUSH), SP: 2042, Stack: 0 1 6 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 84, TICK: 319, IP: 589, DR: 0, AR: 0, AC: 0, Z: False, INSTR: Instr(LD arg[0 (STACK_OFFSET)] ), SP: 2042, Stack: 0 1 6 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 85, TICK: 324, IP: 590, DR: 1, AR: 0, AC: 0, Z: True, INSTR: Instr(EQ arg[1 (STACK_OFFSET)] ), SP: 2042, Stack: 0 1 6 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 86, TICK: 327, IP: 591, DR: 601, AR: 0, AC: 0, Z: True, INSTR: Instr(JNZ arg[601 (ADDRESS)] ), SP: 2042, Stack: 0 1 6 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 87, TICK: 332, IP: 592, DR: 6, AR: 0, AC: 6, Z: False, INSTR: Instr(LD arg[2 (STACK_OFFSET)] ), SP: 2042, Stack: 0 1 6 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 88, TICK: 337, IP: 593, DR: 0, AR: 0, AC: 6, Z: False, INSTR: Instr(ADD arg[0 (STACK_OFFSET)] ), SP: 2042, Stack: 0 1 6 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 89, TICK: 340, IP: 594, DR: 1, AR: 0, AC: 7, Z: False, INSTR: Instr(ADD arg[1 (DIRECT)] ), SP: 2042, Stack: 0 1 6 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 90, TICK: 343, IP: 595, DR: 1, AR: 0, AC: 7, Z: False, INSTR: Instr(ST arg[1 (ADDRESS)] ), SP: 2042, Stack: 0 1 6 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 91, TICK: 348, IP: 596, DR: 99, AR: 0, AC: 99, Z: False, INSTR: Instr(LD arg[1 (INDIRECT)] ), SP: 2042, Stack: 0 1 6 6 4 2 
-    DEBUG   hardwire:latch_out     OUT: 99 - "c"
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 92, TICK: 351, IP: 597, DR: 99, AR: 0, AC: 99, Z: False, INSTR: Instr(OUT), SP: 2042, Stack: 0 1 6 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 93, TICK: 356, IP: 598, DR: 0, AR: 0, AC: 0, Z: False, INSTR: Instr(LD arg[0 (STACK_OFFSET)] ), SP: 2042, Stack: 0 1 6 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 94, TICK: 359, IP: 599, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(ADD arg[1 (DIRECT)] ), SP: 2042, Stack: 0 1 6 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 95, TICK: 363, IP: 600, DR: 2042, AR: 0, AC: 1, Z: False, INSTR: Instr(ST arg[0 (STACK_OFFSET)] ), SP: 2042, Stack: 1 1 6 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 96, TICK: 366, IP: 588, DR: 588, AR: 0, AC: 1, Z: False, INSTR: Instr(JMP arg[588 (ADDRESS)] ), SP: 2042, Stack: 1 1 6 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 97, TICK: 371, IP: 589, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(LD arg[0 (STACK_OFFSET)] ), SP: 2042, Stack: 1 1 6 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 98, TICK: 376, IP: 590, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(EQ arg[1 (STACK_OFFSET)] ), SP: 2042, Stack: 1 1 6 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 99, TICK: 379, IP: 601, DR: 601, AR: 0, AC: 1, Z: False, INSTR: Instr(JNZ arg[601 (ADDRESS)] ), SP: 2042, Stack: 1 1 6 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 100, TICK: 384, IP: 602, DR: 6, AR: 0, AC: 6, Z: False, INSTR: Instr(LD arg[2 (STACK_OFFSET)] ), SP: 2042, Stack: 1 1 6 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 101, TICK: 387, IP: 603, DR: 6, AR: 0, AC: 6, Z: False, INSTR: Instr(POP), SP: 2043, Stack: 1 6 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 102, TICK: 390, IP: 604, DR: 6, AR: 0, AC: 6, Z: False, INSTR: Instr(POP), SP: 2044, Stack: 6 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 103, TICK: 393, IP: 605, DR: 6, AR: 0, AC: 6, Z: False, INSTR: Instr(POP), SP: 2045, Stack: 6 4 2 
-    DEBUG   hardwire:handle_execute_tick INSTR_N: 104, TICK: 396, IP: 606, DR: 6, AR: 0, AC: 6, Z: False, INSTR: Instr(HLT), SP: 2045, Stack: 6 4 2
+  DEBUG   machine:simulation    INSTR_N: 0, TICK: 0, IP: 0, DR: 0, AR: 0, AC: 0, Z: True, INSTR: None, SP: 2048, Stack: 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 1, TICK: 3, IP: 512, DR: 512, AR: 0, AC: 0, Z: True, INSTR: Instr(JMP arg[512 (ADDRESS)] ), SP: 2048, Stack: 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 2, TICK: 6, IP: 513, DR: 1, AR: 0, AC: 1, Z: True, INSTR: Instr(LD arg[1 (DIRECT)] ), SP: 2048, Stack: 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 3, TICK: 9, IP: 514, DR: 2, AR: 0, AC: 1, Z: True, INSTR: Instr(ST arg[2 (ADDRESS)] ), SP: 2048, Stack: 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 4, TICK: 12, IP: 515, DR: 97, AR: 0, AC: 97, Z: True, INSTR: Instr(LD arg[97 (DIRECT)] ), SP: 2048, Stack: 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 5, TICK: 15, IP: 516, DR: 3, AR: 0, AC: 97, Z: True, INSTR: Instr(ST arg[3 (ADDRESS)] ), SP: 2048, Stack: 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 6, TICK: 18, IP: 517, DR: 2, AR: 0, AC: 2, Z: True, INSTR: Instr(LD arg[2 (DIRECT)] ), SP: 2048, Stack: 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 7, TICK: 21, IP: 518, DR: 2, AR: 0, AC: 2, Z: True, INSTR: Instr(PUSH), SP: 2047, Stack: 0 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 7, TICK: 22, IP: 518, DR: 2, AR: 0, AC: 2, Z: True, INSTR: Instr(PUSH), SP: 2047, Stack: 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 8, TICK: 26, IP: 519, DR: 2047, AR: 0, AC: 2, Z: False, INSTR: Instr(ST arg[0 (STACK_OFFSET)] ), SP: 2047, Stack: 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 9, TICK: 29, IP: 520, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(LD arg[1 (DIRECT)] ), SP: 2047, Stack: 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 10, TICK: 32, IP: 521, DR: 4, AR: 0, AC: 1, Z: False, INSTR: Instr(ST arg[4 (ADDRESS)] ), SP: 2047, Stack: 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 11, TICK: 35, IP: 522, DR: 98, AR: 0, AC: 98, Z: False, INSTR: Instr(LD arg[98 (DIRECT)] ), SP: 2047, Stack: 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 12, TICK: 38, IP: 523, DR: 5, AR: 0, AC: 98, Z: False, INSTR: Instr(ST arg[5 (ADDRESS)] ), SP: 2047, Stack: 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 13, TICK: 41, IP: 524, DR: 4, AR: 0, AC: 4, Z: False, INSTR: Instr(LD arg[4 (DIRECT)] ), SP: 2047, Stack: 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 14, TICK: 44, IP: 525, DR: 4, AR: 0, AC: 4, Z: False, INSTR: Instr(PUSH), SP: 2046, Stack: 0 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 14, TICK: 45, IP: 525, DR: 4, AR: 0, AC: 4, Z: False, INSTR: Instr(PUSH), SP: 2046, Stack: 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 15, TICK: 49, IP: 526, DR: 2046, AR: 0, AC: 4, Z: False, INSTR: Instr(ST arg[0 (STACK_OFFSET)] ), SP: 2046, Stack: 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 16, TICK: 52, IP: 527, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(LD arg[1 (DIRECT)] ), SP: 2046, Stack: 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 17, TICK: 55, IP: 528, DR: 6, AR: 0, AC: 1, Z: False, INSTR: Instr(ST arg[6 (ADDRESS)] ), SP: 2046, Stack: 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 18, TICK: 58, IP: 529, DR: 99, AR: 0, AC: 99, Z: False, INSTR: Instr(LD arg[99 (DIRECT)] ), SP: 2046, Stack: 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 19, TICK: 61, IP: 530, DR: 7, AR: 0, AC: 99, Z: False, INSTR: Instr(ST arg[7 (ADDRESS)] ), SP: 2046, Stack: 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 20, TICK: 64, IP: 531, DR: 6, AR: 0, AC: 6, Z: False, INSTR: Instr(LD arg[6 (DIRECT)] ), SP: 2046, Stack: 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 21, TICK: 67, IP: 532, DR: 6, AR: 0, AC: 6, Z: False, INSTR: Instr(PUSH), SP: 2045, Stack: 0 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 21, TICK: 68, IP: 532, DR: 6, AR: 0, AC: 6, Z: False, INSTR: Instr(PUSH), SP: 2045, Stack: 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 22, TICK: 72, IP: 533, DR: 2045, AR: 0, AC: 6, Z: False, INSTR: Instr(ST arg[0 (STACK_OFFSET)] ), SP: 2045, Stack: 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 23, TICK: 77, IP: 534, DR: 2, AR: 0, AC: 2, Z: False, INSTR: Instr(LD arg[2 (STACK_OFFSET)] ), SP: 2045, Stack: 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 24, TICK: 80, IP: 535, DR: 2, AR: 0, AC: 2, Z: False, INSTR: Instr(PUSH), SP: 2044, Stack: 0 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 24, TICK: 81, IP: 535, DR: 2, AR: 0, AC: 2, Z: False, INSTR: Instr(PUSH), SP: 2044, Stack: 2 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 25, TICK: 84, IP: 536, DR: 1, AR: 0, AC: 2, Z: False, INSTR: Instr(ST arg[1 (ADDRESS)] ), SP: 2044, Stack: 2 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 26, TICK: 89, IP: 537, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(LD arg[1 (INDIRECT)] ), SP: 2044, Stack: 2 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 27, TICK: 92, IP: 538, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(PUSH), SP: 2043, Stack: 0 2 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 27, TICK: 93, IP: 538, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(PUSH), SP: 2043, Stack: 1 2 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 28, TICK: 96, IP: 539, DR: 0, AR: 0, AC: 0, Z: False, INSTR: Instr(LD arg[0 (DIRECT)] ), SP: 2043, Stack: 1 2 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 29, TICK: 99, IP: 540, DR: 0, AR: 0, AC: 0, Z: False, INSTR: Instr(PUSH), SP: 2042, Stack: 0 1 2 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 29, TICK: 100, IP: 540, DR: 0, AR: 0, AC: 0, Z: False, INSTR: Instr(PUSH), SP: 2042, Stack: 0 1 2 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 30, TICK: 105, IP: 541, DR: 0, AR: 0, AC: 0, Z: False, INSTR: Instr(LD arg[0 (STACK_OFFSET)] ), SP: 2042, Stack: 0 1 2 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 31, TICK: 110, IP: 542, DR: 1, AR: 0, AC: 0, Z: True, INSTR: Instr(EQ arg[1 (STACK_OFFSET)] ), SP: 2042, Stack: 0 1 2 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 32, TICK: 113, IP: 543, DR: 553, AR: 0, AC: 0, Z: True, INSTR: Instr(JNZ arg[553 (ADDRESS)] ), SP: 2042, Stack: 0 1 2 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 33, TICK: 118, IP: 544, DR: 2, AR: 0, AC: 2, Z: False, INSTR: Instr(LD arg[2 (STACK_OFFSET)] ), SP: 2042, Stack: 0 1 2 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 34, TICK: 123, IP: 545, DR: 0, AR: 0, AC: 2, Z: False, INSTR: Instr(ADD arg[0 (STACK_OFFSET)] ), SP: 2042, Stack: 0 1 2 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 35, TICK: 126, IP: 546, DR: 1, AR: 0, AC: 3, Z: False, INSTR: Instr(ADD arg[1 (DIRECT)] ), SP: 2042, Stack: 0 1 2 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 36, TICK: 129, IP: 547, DR: 1, AR: 0, AC: 3, Z: False, INSTR: Instr(ST arg[1 (ADDRESS)] ), SP: 2042, Stack: 0 1 2 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 37, TICK: 134, IP: 548, DR: 97, AR: 0, AC: 97, Z: False, INSTR: Instr(LD arg[1 (INDIRECT)] ), SP: 2042, Stack: 0 1 2 6 4 2 
+  DEBUG   hardwire:latch_out     OUT: 97 - "a"
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 38, TICK: 137, IP: 549, DR: 97, AR: 0, AC: 97, Z: False, INSTR: Instr(OUT), SP: 2042, Stack: 0 1 2 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 39, TICK: 142, IP: 550, DR: 0, AR: 0, AC: 0, Z: False, INSTR: Instr(LD arg[0 (STACK_OFFSET)] ), SP: 2042, Stack: 0 1 2 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 40, TICK: 145, IP: 551, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(ADD arg[1 (DIRECT)] ), SP: 2042, Stack: 0 1 2 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 41, TICK: 149, IP: 552, DR: 2042, AR: 0, AC: 1, Z: False, INSTR: Instr(ST arg[0 (STACK_OFFSET)] ), SP: 2042, Stack: 1 1 2 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 42, TICK: 152, IP: 540, DR: 540, AR: 0, AC: 1, Z: False, INSTR: Instr(JMP arg[540 (ADDRESS)] ), SP: 2042, Stack: 1 1 2 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 43, TICK: 157, IP: 541, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(LD arg[0 (STACK_OFFSET)] ), SP: 2042, Stack: 1 1 2 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 44, TICK: 162, IP: 542, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(EQ arg[1 (STACK_OFFSET)] ), SP: 2042, Stack: 1 1 2 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 45, TICK: 165, IP: 553, DR: 553, AR: 0, AC: 1, Z: False, INSTR: Instr(JNZ arg[553 (ADDRESS)] ), SP: 2042, Stack: 1 1 2 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 46, TICK: 170, IP: 554, DR: 2, AR: 0, AC: 2, Z: False, INSTR: Instr(LD arg[2 (STACK_OFFSET)] ), SP: 2042, Stack: 1 1 2 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 47, TICK: 173, IP: 555, DR: 2, AR: 0, AC: 2, Z: False, INSTR: Instr(POP), SP: 2043, Stack: 1 2 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 48, TICK: 176, IP: 556, DR: 2, AR: 0, AC: 2, Z: False, INSTR: Instr(POP), SP: 2044, Stack: 2 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 49, TICK: 179, IP: 557, DR: 2, AR: 0, AC: 2, Z: False, INSTR: Instr(POP), SP: 2045, Stack: 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 50, TICK: 184, IP: 558, DR: 4, AR: 0, AC: 4, Z: False, INSTR: Instr(LD arg[1 (STACK_OFFSET)] ), SP: 2045, Stack: 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 51, TICK: 187, IP: 559, DR: 4, AR: 0, AC: 4, Z: False, INSTR: Instr(PUSH), SP: 2044, Stack: 2 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 51, TICK: 188, IP: 559, DR: 4, AR: 0, AC: 4, Z: False, INSTR: Instr(PUSH), SP: 2044, Stack: 4 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 52, TICK: 191, IP: 560, DR: 1, AR: 0, AC: 4, Z: False, INSTR: Instr(ST arg[1 (ADDRESS)] ), SP: 2044, Stack: 4 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 53, TICK: 196, IP: 561, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(LD arg[1 (INDIRECT)] ), SP: 2044, Stack: 4 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 54, TICK: 199, IP: 562, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(PUSH), SP: 2043, Stack: 1 4 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 54, TICK: 200, IP: 562, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(PUSH), SP: 2043, Stack: 1 4 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 55, TICK: 203, IP: 563, DR: 0, AR: 0, AC: 0, Z: False, INSTR: Instr(LD arg[0 (DIRECT)] ), SP: 2043, Stack: 1 4 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 56, TICK: 206, IP: 564, DR: 0, AR: 0, AC: 0, Z: False, INSTR: Instr(PUSH), SP: 2042, Stack: 1 1 4 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 56, TICK: 207, IP: 564, DR: 0, AR: 0, AC: 0, Z: False, INSTR: Instr(PUSH), SP: 2042, Stack: 0 1 4 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 57, TICK: 212, IP: 565, DR: 0, AR: 0, AC: 0, Z: False, INSTR: Instr(LD arg[0 (STACK_OFFSET)] ), SP: 2042, Stack: 0 1 4 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 58, TICK: 217, IP: 566, DR: 1, AR: 0, AC: 0, Z: True, INSTR: Instr(EQ arg[1 (STACK_OFFSET)] ), SP: 2042, Stack: 0 1 4 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 59, TICK: 220, IP: 567, DR: 577, AR: 0, AC: 0, Z: True, INSTR: Instr(JNZ arg[577 (ADDRESS)] ), SP: 2042, Stack: 0 1 4 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 60, TICK: 225, IP: 568, DR: 4, AR: 0, AC: 4, Z: False, INSTR: Instr(LD arg[2 (STACK_OFFSET)] ), SP: 2042, Stack: 0 1 4 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 61, TICK: 230, IP: 569, DR: 0, AR: 0, AC: 4, Z: False, INSTR: Instr(ADD arg[0 (STACK_OFFSET)] ), SP: 2042, Stack: 0 1 4 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 62, TICK: 233, IP: 570, DR: 1, AR: 0, AC: 5, Z: False, INSTR: Instr(ADD arg[1 (DIRECT)] ), SP: 2042, Stack: 0 1 4 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 63, TICK: 236, IP: 571, DR: 1, AR: 0, AC: 5, Z: False, INSTR: Instr(ST arg[1 (ADDRESS)] ), SP: 2042, Stack: 0 1 4 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 64, TICK: 241, IP: 572, DR: 98, AR: 0, AC: 98, Z: False, INSTR: Instr(LD arg[1 (INDIRECT)] ), SP: 2042, Stack: 0 1 4 6 4 2 
+  DEBUG   hardwire:latch_out     OUT: 98 - "b"
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 65, TICK: 244, IP: 573, DR: 98, AR: 0, AC: 98, Z: False, INSTR: Instr(OUT), SP: 2042, Stack: 0 1 4 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 66, TICK: 249, IP: 574, DR: 0, AR: 0, AC: 0, Z: False, INSTR: Instr(LD arg[0 (STACK_OFFSET)] ), SP: 2042, Stack: 0 1 4 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 67, TICK: 252, IP: 575, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(ADD arg[1 (DIRECT)] ), SP: 2042, Stack: 0 1 4 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 68, TICK: 256, IP: 576, DR: 2042, AR: 0, AC: 1, Z: False, INSTR: Instr(ST arg[0 (STACK_OFFSET)] ), SP: 2042, Stack: 1 1 4 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 69, TICK: 259, IP: 564, DR: 564, AR: 0, AC: 1, Z: False, INSTR: Instr(JMP arg[564 (ADDRESS)] ), SP: 2042, Stack: 1 1 4 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 70, TICK: 264, IP: 565, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(LD arg[0 (STACK_OFFSET)] ), SP: 2042, Stack: 1 1 4 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 71, TICK: 269, IP: 566, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(EQ arg[1 (STACK_OFFSET)] ), SP: 2042, Stack: 1 1 4 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 72, TICK: 272, IP: 577, DR: 577, AR: 0, AC: 1, Z: False, INSTR: Instr(JNZ arg[577 (ADDRESS)] ), SP: 2042, Stack: 1 1 4 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 73, TICK: 277, IP: 578, DR: 4, AR: 0, AC: 4, Z: False, INSTR: Instr(LD arg[2 (STACK_OFFSET)] ), SP: 2042, Stack: 1 1 4 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 74, TICK: 280, IP: 579, DR: 4, AR: 0, AC: 4, Z: False, INSTR: Instr(POP), SP: 2043, Stack: 1 4 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 75, TICK: 283, IP: 580, DR: 4, AR: 0, AC: 4, Z: False, INSTR: Instr(POP), SP: 2044, Stack: 4 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 76, TICK: 286, IP: 581, DR: 4, AR: 0, AC: 4, Z: False, INSTR: Instr(POP), SP: 2045, Stack: 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 77, TICK: 291, IP: 582, DR: 6, AR: 0, AC: 6, Z: False, INSTR: Instr(LD arg[0 (STACK_OFFSET)] ), SP: 2045, Stack: 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 78, TICK: 294, IP: 583, DR: 6, AR: 0, AC: 6, Z: False, INSTR: Instr(PUSH), SP: 2044, Stack: 4 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 78, TICK: 295, IP: 583, DR: 6, AR: 0, AC: 6, Z: False, INSTR: Instr(PUSH), SP: 2044, Stack: 6 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 79, TICK: 298, IP: 584, DR: 1, AR: 0, AC: 6, Z: False, INSTR: Instr(ST arg[1 (ADDRESS)] ), SP: 2044, Stack: 6 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 80, TICK: 303, IP: 585, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(LD arg[1 (INDIRECT)] ), SP: 2044, Stack: 6 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 81, TICK: 306, IP: 586, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(PUSH), SP: 2043, Stack: 1 6 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 81, TICK: 307, IP: 586, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(PUSH), SP: 2043, Stack: 1 6 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 82, TICK: 310, IP: 587, DR: 0, AR: 0, AC: 0, Z: False, INSTR: Instr(LD arg[0 (DIRECT)] ), SP: 2043, Stack: 1 6 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 83, TICK: 313, IP: 588, DR: 0, AR: 0, AC: 0, Z: False, INSTR: Instr(PUSH), SP: 2042, Stack: 1 1 6 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 83, TICK: 314, IP: 588, DR: 0, AR: 0, AC: 0, Z: False, INSTR: Instr(PUSH), SP: 2042, Stack: 0 1 6 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 84, TICK: 319, IP: 589, DR: 0, AR: 0, AC: 0, Z: False, INSTR: Instr(LD arg[0 (STACK_OFFSET)] ), SP: 2042, Stack: 0 1 6 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 85, TICK: 324, IP: 590, DR: 1, AR: 0, AC: 0, Z: True, INSTR: Instr(EQ arg[1 (STACK_OFFSET)] ), SP: 2042, Stack: 0 1 6 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 86, TICK: 327, IP: 591, DR: 601, AR: 0, AC: 0, Z: True, INSTR: Instr(JNZ arg[601 (ADDRESS)] ), SP: 2042, Stack: 0 1 6 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 87, TICK: 332, IP: 592, DR: 6, AR: 0, AC: 6, Z: False, INSTR: Instr(LD arg[2 (STACK_OFFSET)] ), SP: 2042, Stack: 0 1 6 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 88, TICK: 337, IP: 593, DR: 0, AR: 0, AC: 6, Z: False, INSTR: Instr(ADD arg[0 (STACK_OFFSET)] ), SP: 2042, Stack: 0 1 6 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 89, TICK: 340, IP: 594, DR: 1, AR: 0, AC: 7, Z: False, INSTR: Instr(ADD arg[1 (DIRECT)] ), SP: 2042, Stack: 0 1 6 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 90, TICK: 343, IP: 595, DR: 1, AR: 0, AC: 7, Z: False, INSTR: Instr(ST arg[1 (ADDRESS)] ), SP: 2042, Stack: 0 1 6 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 91, TICK: 348, IP: 596, DR: 99, AR: 0, AC: 99, Z: False, INSTR: Instr(LD arg[1 (INDIRECT)] ), SP: 2042, Stack: 0 1 6 6 4 2 
+  DEBUG   hardwire:latch_out     OUT: 99 - "c"
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 92, TICK: 351, IP: 597, DR: 99, AR: 0, AC: 99, Z: False, INSTR: Instr(OUT), SP: 2042, Stack: 0 1 6 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 93, TICK: 356, IP: 598, DR: 0, AR: 0, AC: 0, Z: False, INSTR: Instr(LD arg[0 (STACK_OFFSET)] ), SP: 2042, Stack: 0 1 6 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 94, TICK: 359, IP: 599, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(ADD arg[1 (DIRECT)] ), SP: 2042, Stack: 0 1 6 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 95, TICK: 363, IP: 600, DR: 2042, AR: 0, AC: 1, Z: False, INSTR: Instr(ST arg[0 (STACK_OFFSET)] ), SP: 2042, Stack: 1 1 6 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 96, TICK: 366, IP: 588, DR: 588, AR: 0, AC: 1, Z: False, INSTR: Instr(JMP arg[588 (ADDRESS)] ), SP: 2042, Stack: 1 1 6 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 97, TICK: 371, IP: 589, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(LD arg[0 (STACK_OFFSET)] ), SP: 2042, Stack: 1 1 6 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 98, TICK: 376, IP: 590, DR: 1, AR: 0, AC: 1, Z: False, INSTR: Instr(EQ arg[1 (STACK_OFFSET)] ), SP: 2042, Stack: 1 1 6 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 99, TICK: 379, IP: 601, DR: 601, AR: 0, AC: 1, Z: False, INSTR: Instr(JNZ arg[601 (ADDRESS)] ), SP: 2042, Stack: 1 1 6 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 100, TICK: 384, IP: 602, DR: 6, AR: 0, AC: 6, Z: False, INSTR: Instr(LD arg[2 (STACK_OFFSET)] ), SP: 2042, Stack: 1 1 6 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 101, TICK: 387, IP: 603, DR: 6, AR: 0, AC: 6, Z: False, INSTR: Instr(POP), SP: 2043, Stack: 1 6 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 102, TICK: 390, IP: 604, DR: 6, AR: 0, AC: 6, Z: False, INSTR: Instr(POP), SP: 2044, Stack: 6 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 103, TICK: 393, IP: 605, DR: 6, AR: 0, AC: 6, Z: False, INSTR: Instr(POP), SP: 2045, Stack: 6 4 2 
+  DEBUG   hardwire:handle_execute_tick INSTR_N: 104, TICK: 396, IP: 606, DR: 6, AR: 0, AC: 6, Z: False, INSTR: Instr(HLT), SP: 2045, Stack: 6 4 2

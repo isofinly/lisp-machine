@@ -160,7 +160,7 @@ JMP, которая переходит на начало секции `CODE`.
 | `RET`      | direct     | 2                                    | IP <- MEM(SP); SP <- SP + 1                                          |
 | `HLT`      | direct     | 1                                    | завершение работы программы                                          |
 
-## Траслятор
+## Транслятор
 Транслятор состоит из двух частей:
 * Лексер, реализован в [tokenizer](./computer_simulator/translator/tokenizer.py)
 * Модуль, преобразующий токены в программу, реализован в [expression_translator](./computer_simulator/translator/expression_translator.py)

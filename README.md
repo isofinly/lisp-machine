@@ -191,7 +191,7 @@ JMP, которая переходит на начало секции `CODE`.
 ### ControlUnit
 Реализован в классе `ControlUnit`
 
-![Processor](./resources/ControlUnit_.png)
+![Processor](./resources/CU.png)
 
 Основная работа с данными происходит на уровне DataPath, а ControlUnit с помощью
 сигналов работает с этими данными. ControlUnit реализован как hardwired.
